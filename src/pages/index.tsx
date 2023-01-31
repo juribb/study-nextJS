@@ -15,19 +15,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="title">
-        Read <Link href="/posts/first-post">this page!</Link>
-      </h1>
-      <h1 className="title">
-        a tag <a href="/posts/first-post">a tag page!</a>
-      </h1>
-      <img src="/images/profile.jpg" alt="Your Name" />
-      <Image
+      <h1>home</h1>
+      {/* <img src="/images/profile.jpg" alt="Your Name" /> */}
+      {/* <Image
         src="/images/profile.jpg" // Route of the image file
         height={144} // Desired size with correct aspect ratio
         width={144} // Desired size with correct aspect ratio
         alt="Your Name"
-      />
+      /> */}
     
     </>
   )
