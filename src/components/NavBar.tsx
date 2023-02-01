@@ -4,7 +4,6 @@ import styles from "./NavBar.module.css"
 
 export default function NavBar() {
     const router = useRouter();
-    console.log(router.pathname);
     return ( 
     // css module을 사용할 땐 className을 오브젝트 프로퍼티 형식으로 적어야 하며, 하나 이상의 className을 갖게 하려면 문자열로 만들어줘야 한다.
     <nav>
