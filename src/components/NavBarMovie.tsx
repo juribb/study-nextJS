@@ -5,7 +5,7 @@ export default function NavBarMovie() {
   const router = useRouter();
   return (
     <nav>
-      <img src="/vercel.svg" />
+      <img src="/images/logo.svg" alt ="logo" />
       <div>
         <Link legacyBehavior href="/">
           <a className={router.pathname === "/" ? "active" : ""}>Home</a>

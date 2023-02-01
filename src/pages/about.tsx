@@ -1,5 +1,13 @@
+import Seo from "@/components/Seo";
+
 const About = () => {
-    return <h1>About</h1>;
+    
+    return (
+        <>
+            <Seo title="About" />
+            <h1>About</h1>
+        </>
+    );
 }
 
 export default About;
