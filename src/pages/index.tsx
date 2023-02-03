@@ -2,6 +2,7 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Seo from '@/components/Seo'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,15 +21,29 @@ const Home = ({results}:any) => {
   //   })();
   // }, []);
 
+  const router = useRouter();
+  const goDetailPage = (id:string, title:string) => {
+    // router.push(
+    //   {
+    //     pathname: `/movies/${id}`,
+    //     query: {
+    //       title,
+    //     },
+    //   },
+    //   `/movies/${id}`
+    // );
+    router.push(`/movies/${title}/${id}`);
+  };
+
   return (
     <>
       <div className="container">
       <Seo title="Home" />
       {results?.map((movie:any) => (
-        <div className="movie" key={movie.id}>
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-        <h4>{movie.original_title}</h4>
-      </div>
+        <div className="movie" key={movie.id} onClick={()=> goDetailPage(movie.id, movie.title)}>
+          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+          <h4>{movie.title}</h4>
+        </div>
       ))}
     </div>
     <style jsx>{`
